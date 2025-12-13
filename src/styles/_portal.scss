@@ -1,0 +1,498 @@
+/**** Global CSS ****/
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+/*html body {
+        margin-bottom: 168px;
+    }*/
+
+body {
+  background: #f4f4f4 none repeat scroll 0 0 !important;
+}
+
+/**** Drupal Core CSS Override ****/
+#skip-link {
+  display: none;
+}
+
+.element-invisible {
+  display: none;
+}
+
+/**** Header CSS ****/
+header {
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #404042 0%, #404042 5%, #38383a 20%, #0a0a0a 76%, #010101 91%, #000000 100%) repeat scroll 0 0;
+  /** background: #001833; **cho-comment 2025-06-06 **/
+  background: #00629B;
+  height: 67px;
+  width: 100%;
+}
+
+header>.container {
+  padding: 0 !important;
+}
+
+header a#logo {
+  float: left;
+}
+
+header h1.title {
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  font-size: 25px;
+  width: 50%;
+  font-weight: lighter;
+  margin-left: 60px;
+}
+
+header h1.title span {
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+header a#ntc-logo {
+  float: right;
+  /*background-image: url('/images/ntc-logo-white-28pix.png');*/
+  background-repeat: no-repeat;
+  width: 199px;
+  height: 28px;
+  text-indent: -9999px;
+  margin-top: -48px;
+}
+
+@media only screen and (max-width: 991px) {
+  header h1.title {
+    font-size: 22px;
+  }
+
+  header a#ntc-logo {
+    margin-top: -48px;
+    /*margin-right: 24px;*/
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header h1.title {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  header a#ntc-logo {
+    margin-top: -43px;
+    /*margin-right: 24px;*/
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  header h1.title {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  header a#ntc-logo {
+    margin-top: -48px;
+    margin-right: 24px;
+    width: 32px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header a#ntc-logo {
+    display: none;
+  }
+
+  header h1.title {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  header h1.title span {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  header {
+    height: auto;
+  }
+
+  header a#logo {
+    display: none;
+  }
+
+  header h1.title {
+    font-size: 16px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  header h1.title span {
+    padding-left: 0;
+  }
+}
+
+.loginbar a:visited,
+.loginbar a:link,
+.loginbar a:active,
+.loginbar a:hover {
+  color: white;
+}
+
+.loginbar {
+  margin-bottom: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: white;
+  background-color: #444444;
+}
+
+/**** Primary Tabs ****/
+#tabs-primary {
+  margin-top: 24px;
+}
+
+.composite-control {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  color: #495057;
+  padding-top: 6px;
+  border-radius: 1px;
+  background-image: none;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  margin-left: 0px;
+}
+
+.form-canvas {
+  height: auto;
+}
+
+/**** Content CSS ****/
+#siteContent {
+  min-height: 600px;
+}
+
+#siteContent #info {
+  background-color: #ffffff;
+  padding-bottom: 24px;
+}
+
+#siteContent #info>.col {
+  padding: 0;
+}
+
+#siteContent>.popup {
+  background: white;
+  padding: 24px;
+}
+
+#page-title {
+  font-size: 35px;
+  color: #000000;
+  line-height: 150%;
+}
+
+#page-title span {
+  color: #ff0000;
+}
+
+/*.node-type-product #page-title span {
+    display: inline;
+}*/
+
+/*.node-type-product #siteContent #info img {
+    display: block;
+    margin: 0 auto 24px;
+}*/
+
+@media only screen and (max-width: 768px) {
+  /*.node-type-product #siteContent #info img {
+        max-width: 100% !important;
+        height: auto !important;
+    }*/
+
+  #menu,
+  #downloads {
+    margin-top: 24px;
+  }
+
+  #downloads {
+    padding-left: 0;
+  }
+
+  #downloads .row {
+    margin: 0 !important;
+  }
+}
+
+#downloads {
+  padding-right: 0 !important;
+}
+
+#downloads .box {
+  background: #ffffff;
+  margin-bottom: 24px;
+}
+
+#downloads .box button {
+  width: 100%;
+  text-align: left;
+  background: #ff0000 url("/images/down-arrow.png") no-repeat scroll 97.5% 50%;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 180%;
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+
+#downloads .box .field {
+  width: 100%;
+  padding: 24px;
+}
+
+#downloads .box .field ol {
+  padding-left: 5px;
+}
+
+#downloads .box .field ol a {
+  color: inherit;
+}
+
+.menuItem {
+  margin-bottom: 24px;
+}
+
+.menuItem h2 {
+  background-color: #ff0000;
+  display: block;
+  font-size: 15px;
+  padding: 12px 18px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.menuItem h2 span {
+  font-weight: lighter;
+}
+
+.menuItem h2 a {
+  color: white;
+  text-decoration: none;
+}
+
+.menuItem div {
+  background-color: #ffffff;
+  display: block;
+  padding: 18px 12px;
+}
+
+.menuItem img {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 220px;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 1199px) {
+  .menuItem h2 {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .menuItem h2 {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .menuItem h2 {
+    font-size: 15px;
+  }
+}
+
+/**** Popup Box ****/
+.popup .row {
+  width: 100%;
+}
+
+.popup-title {
+  color: red;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  line-height: 120%;
+}
+
+.popup img {
+  box-shadow: 0px 0px 4px;
+  margin: 0 auto;
+  display: block;
+}
+
+.popup .buttons {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.popup table {
+  width: 100%;
+}
+
+.popup table.cert td {
+  padding: 5px;
+}
+
+a.dl {
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #e8e8e8 95%, #f2f2f2 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #e8e8e8 95%, #f2f2f2 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #e8e8e8 95%, #f2f2f2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0);
+  width: 150px;
+  height: 28px;
+  display: inline-block;
+  border: 1px solid #d8d8d8;
+  line-height: 28px;
+  color: #525252;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.popup .image {
+  margin-bottom: 24px;
+}
+
+.popup .image .file-icon,
+.popup .image .file-size {
+  display: none;
+}
+
+.popup .image img {
+  box-shadow: 0 0 0;
+}
+
+/**** Footer CSS ****/
+footer {
+  background: #000000 none repeat scroll 0 0;
+  /** background: #001833; cho-commment 2025-06-06 **/
+  background: #00629B;
+  width: 100%;
+  margin-top: 24px;
+  position: relative;
+  height: 144px;
+}
+
+header>.container {
+  padding: 0 !important;
+}
+
+footer .ntc-info {
+  /** border-bottom: 1px solid #58595b; cho-commmented 2025-06-06 **/
+  border-bottom: 1px solid white;
+  border-top: 1px solid #58595b;
+  height: 65px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+footer .ntc-info a.link {
+  /*background-image: url('/images/ntc-logo-white-36pix.png');*/
+  width: 170px;
+  height: 36px;
+  display: block;
+  float: left;
+  margin-top: 14px;
+  text-indent: -9999px;
+}
+
+footer .ntc-info .social {
+  float: right;
+}
+
+footer .ntc-info .social a {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+footer .ntc-info .social a span {
+  background: #939598;
+  color: black;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px !important;
+  font-size: 16px !important;
+}
+
+footer .copyright {
+  padding: 12px 0;
+  text-align: right;
+  width: 100%;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 480px) {
+  footer .copyright {
+    text-align: center;
+  }
+
+  footer .copyright a {
+    display: block;
+  }
+}
+
+/**** Maintenance Page ****/
+.maintenance-page #page {
+  width: 800px;
+  border: 1px solid #000000;
+  margin: 100px auto 0;
+  padding: 24px;
+  background-color: #ffffff;
+}
+
+.maintenance-page #logo {
+  display: none;
+}
+
+#documentframe {
+  border: none;
+  width: 740px;
+  height: 400px;
+}
+
+/**** Top Menu ****/
+nav {
+  display: block;
+  float: left;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0 0;
+}
+
+nav li {
+  display: inline;
+  padding: 0 20px;
+}
+
+nav li.first {
+  padding-left: 0;
+}
+
+nav li a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+}

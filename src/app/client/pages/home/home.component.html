@@ -1,0 +1,52 @@
+<main>
+  <div class="loginbar" style="display: none;">
+    <div class="container">
+      <div class="pull-right">
+        <a href="/changepassword" title="Change Password"><i class="fa fa-lock"></i>&nbsp;Change
+          Password</a>&nbsp;&nbsp;
+        <a href="/preferences" title="Set Email Preferences"><i class="fa fa-cogs"></i>&nbsp;Preferences</a>&nbsp;&nbsp;
+
+        <a href="/logout" title="Log Out"><i class="fa fa-sign-out"></i>&nbsp;Logout</a>
+      </div>
+      <div>
+        You are logged in as <strong><span id="lblUsername"></span></strong>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="tabs-primary" class="row">
+      <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      </div>
+    </div>
+    <form method="post" action="./" id="form1">
+      <div id="siteContent" class="row">
+        <div id="info" class="col-12 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <h2 id="page-title">Welcome to the <span>Vodafone Resource Centre</span></h2>
+          <div id="node-1" class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+            <p>On this site you'll find everything you need to know about the MachineLink family created exclusively for
+              Vodafone by NetComm Wireless.</p>
+            <p>Device images, specification sheets, videos and more can be found on the individual product pages and new
+              resources and products will be added as they become available.</p>
+            <p><strong>NOTICE</strong></p>
+            <p>Vodafone wishes to advise its customers and partners that the MachineLink 3G, MachineLink 3G Plus and
+              MachineLink 4G have been withdrawn from sale as of December 2020. Critical bug fixes and other vital
+              updates will continue for a further 3 years until December 2023, after which all technical support will be
+              withdrawn.</p>
+            <p>Vodafone recommends the MachineLink 4G Lite as a replacement product going forward.</p>
+            <p><strong>NOTICE</strong></p>
+            <p>Vodafone wishes to advise its customers and partners that the MachineLink Ethernet Switch has been
+              withdrawn from sale as of January 2021. Technical support will continue for a further 3 years until
+              January 2024.</p>
+          </div>
+        </div>
+        <div id="menu" class="col-12 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <app-product-list [products]="products" />
+        </div>
+      </div>
+
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RL6GV30N4D"></script>
+      <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-RL6GV30N4D');</script>
+    </form>
+  </div>
+</main>

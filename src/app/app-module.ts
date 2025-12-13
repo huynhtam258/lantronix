@@ -1,0 +1,33 @@
+import { ErrorHandler, NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing-module';
+import { App } from './app';
+
+
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+
+import { ApiInterceptor } from './core/interceptors/api.interceptor';
+import { HttpErrorInterceptor } from './core/interceptors/http-error.interceptor';
+import { GlobalErrorHandler } from './core/errors/global-error-handler';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
+
+@NgModule({
+  declarations: [
+    App
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CoreModule,
+    SharedModule,
+  ],
+  providers: [
+    { provide: ErrorHandler, useClass: GlobalErrorHandler },
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
+  ],
+  bootstrap: [App]
+})
+export class AppModule { }

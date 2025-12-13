@@ -1,0 +1,24 @@
+<div class="row">
+  <div
+    class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6"
+    *ngFor="let p of products"
+  >
+    <div class="field-content menuItem">
+      <h2>
+        <a [href]="p.link">
+          {{ p.title }} - <span>{{ p.code }}</span>
+        </a>
+      </h2>
+      <div>
+        <a [href]="p.link">
+          <img
+            [src]="p.img"
+            [width]="p.width"
+            [height]="p.height"
+            [alt]="p.title"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

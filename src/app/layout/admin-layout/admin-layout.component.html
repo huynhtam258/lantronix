@@ -1,0 +1,29 @@
+<div class="admin-wrapper d-flex">
+  <aside class="admin-sidebar p-3">
+    <div class="d-flex align-items-center mb-4">
+      <img
+        [src]="tenant.logoUrl"
+        [alt]="tenant.name"
+        height="32"
+        class="me-2"
+      />
+      <strong>{{ tenant.name }}</strong>
+    </div>
+
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a routerLink="/admin" class="nav-link">Dashboard</a>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="admin-main flex-grow-1 p-4">
+    <header class="d-flex justify-content-end mb-3">
+      <button class="btn btn-outline-secondary btn-sm" (click)="logout()">
+        Logout
+      </button>
+    </header>
+
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,31 @@
+footer {
+  background: #00629B;
+  width: 100%;
+  margin-top: 24px;
+  position: relative;
+  height: 144px;
+
+  .ntc-info {
+    border-bottom: 1px solid white;
+    border-top: 1px solid #58595b;
+    height: 65px;
+    width: 100%;
+    margin-top: 24px;
+
+    a.link {
+      width: 170px;
+      height: 36px;
+      display: block;
+      float: left;
+      margin-top: 14px;
+      text-indent: -9999px;
+    }
+  }
+
+  .copyright {
+    padding: 12px 0;
+    text-align: right;
+    width: 100%;
+    color: #ffffff;
+  }
+}

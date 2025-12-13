@@ -1,0 +1,33 @@
+header {
+  background: #00629B;
+  height: 67px;
+  width: 100%;
+
+  a#logo {
+    float: left;
+  }
+
+  h1.title {
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    font-size: 25px;
+    width: 50%;
+    font-weight: lighter;
+    margin-left: 60px;
+
+    span {
+      font-weight: bold;
+      padding-left: 30px;
+    }
+  }
+
+  a#ntc-logo {
+    float: right;
+    background-repeat: no-repeat;
+    width: 199px;
+    height: 28px;
+    text-indent: -9999px;
+    margin-top: -48px;
+  }
+}
