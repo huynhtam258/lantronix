@@ -3,7 +3,7 @@ name: Deloy Production
 on:
   push:
     branches: ['main']
-  pull_resquest:
+  pull_request:
     branches: ['main']
 
 jobs:
