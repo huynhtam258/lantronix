@@ -1,20 +1,56 @@
-name: Deloy Production
+name: Deploy CI/CD
 
 on:
   push:
-    branches: ['main']
+    branches: ['dev', 'stag', 'main']
   pull_request:
-    branches: ['main']
+    branches: ['dev', 'stag', 'main']
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Use Node.js 22.12.0
         uses: actions/setup-node@v4
         with:
           node-version: 22.12.0
           cache: 'npm'
-      - run: npm i --force
-      - run: npm run build:prod
+
+      - name: Resolve build env
+        id: env
+        shell: bash
+        run: |
+          # PR → dùng branch đích
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            BRANCH="${{ github.base_ref }}"
+          else
+            BRANCH="${{ github.ref_name }}"
+          fi
+
+          case "$BRANCH" in
+            dev)
+              BUILD_ENV="dev"
+              ;;
+            stag)
+              BUILD_ENV="stag"
+              ;;
+            main)
+              BUILD_ENV="prod"
+              ;;
+            *)
+              echo "Unsupported branch: $BRANCH"
+              exit 1
+              ;;
+          esac
+
+          echo "build_env=$BUILD_ENV" >> $GITHUB_OUTPUT
+          echo "Branch: $BRANCH → build:$BUILD_ENV"
+
+      - name: Install dependencies
+        run: npm i --force
+
+      - name: Build Angular
+        run: npm run build:${{ steps.env.outputs.build_env }}
