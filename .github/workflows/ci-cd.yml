@@ -2,9 +2,9 @@ name: Deploy CI/CD
 
 on:
   push:
-    branches: ['dev', 'stag', 'main']
+    branches: ['dev']
   pull_request:
-    branches: ['dev', 'stag', 'main']
+    branches: ['dev']
 
 jobs:
   build:
@@ -23,7 +23,6 @@ jobs:
         id: env
         shell: bash
         run: |
-          # PR → dùng branch đích
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
             BRANCH="${{ github.base_ref }}"
           else
@@ -52,5 +51,5 @@ jobs:
       - name: Install dependencies
         run: npm i --force
 
-      - name: Build Angular
+      - name: Build source
         run: npm run build:${{ steps.env.outputs.build_env }}
